@@ -1,8 +1,12 @@
-import React from "react";
-
+import React,{useState} from "react";
+import "./lander.css"
+import Signup from "../../components/signup.js"
+import Login from "../../components/login.js"
 
 // Introduction - First
 const Introduction = function (){
+  const [showSignup,setShowSignup] = useState(false)
+  const [showLogin,setShowLogin] = useState(false)
     return (
         <div className="text-white">
             <nav className="flex justify-between items-center">
@@ -10,14 +14,17 @@ const Introduction = function (){
                     <img src="https://i.ibb.co/XX4yXpv/4-removebg-preview-2.png" alt="Logo" className="h-24 w-24 mr-10"/>
                     {/* <span className="font-bold text-lg">STUDY PARTNER</span> */}
                     <div className="space-x-8 hidden md:flex">
-                        <a href="/" className="hover:text-zinc-300">Contact Us</a>
-                        <a href="/" className="hover:text-zinc-300">Features</a>
                         <a href="/" className="hover:text-zinc-300">About Us</a>
+                        <a href="/" className="hover:text-zinc-300">Features</a>
+                        <a href="/" className="hover:text-zinc-300">Contact Us</a>
                     </div>
                 </div>
                 <div className="space-x-4">
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">Signup</button>
-                    <button className="border border-#c48d00 hover:bg-zinc-700 text-#c48d00 font-bold py-2 px-4 rounded login">Login</button>
+                    <button onClick={() => setShowSignup(true)} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">Signup</button>
+                    <button onClick={() => setShowLogin(true)} className="border border-#c48d00 hover:bg-zinc-700 text-#c48d00 font-bold py-2 px-4 rounded login">Login</button>
+                    {showSignup && <Signup onClose={()=> {setShowSignup(false)}}/>}
+                    {showLogin && <Login onClose = {() => {setShowLogin(false)}}/>}
+
                 </div>
             </nav>
             <div className="flex flex-col md:flex-row justify-between pl-6 min-h-screen">
