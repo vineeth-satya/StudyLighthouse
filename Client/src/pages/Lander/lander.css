@@ -42,7 +42,7 @@ body{
   position: relative;
   z-index: -1;
   left: -200px;
-  top: -400px;
+  top: -300px;
 }
 /* Introduction */
 
@@ -65,7 +65,7 @@ body{
   position: absolute;
   z-index: -1;
   right: -200px;
-  top: 1000px;
+  top: 1300px;
 }
 @media only screen and (max-width:780px){
   .about{
