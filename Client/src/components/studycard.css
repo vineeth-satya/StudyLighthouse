@@ -1,0 +1,125 @@
+/* .box {
+    color: white;
+    background-color: #ffffff1a;
+    border: 2px solid;
+    height: 228px;
+    width: 202px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-image: linear-gradient(to bottom right, rgb(81, 81, 177) 30%, transparent 50%, transparent 50%, rgb(177, 161, 74) 80%) 1;
+  }
+  .question-box {
+    height: inherit;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .q {
+    color: #ffffff;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-size: 20px;
+    font-weight: 600;
+    // left: 39px; 
+    letter-spacing: 1.8px;
+    line-height: 20px;
+    // position: absolute; 
+    text-align: center;
+    top: 52px;
+    align-items: center;
+    width: 150px;
+    text-wrap: wrap;
+  }
+  .text-down {
+    color: #ffffff;
+    font-family: "Inter-Medium", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1.44px;
+    line-height: 20px;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+  } */
+
+  .card {
+    --background: 
+        linear-gradient(135deg, #0039a6, rgba(59, 98, 171, 0), rgba(209, 164, 49, 0), rgba(196, 141, 0, 0.63)) border-box;
+    width: 170px;
+    height: 200px;
+    padding: 5px;
+    border-radius: 1rem;
+    overflow: visible;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+}
+
+.card::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.7);
+    filter: blur(25px);
+    background: var(--background);
+    transition: opacity .5s;
+}
+
+.card-info {
+    --color: #101010;
+    background: var(--color);
+    color: #f7ba2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: .7rem;
+    position: relative;
+}
+
+.card .title {
+    font-weight: bold;
+    letter-spacing: .1em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .5s;
+}
+
+.card .text-down {
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.card .question {
+    display: none;
+}
+
+.card:hover::after {
+    opacity: 0;
+}
+
+.card:hover .title {
+    opacity: 0;
+}
+
+.card:hover .text-down {
+    opacity: 1;
+}
+
+.card:hover .question {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
