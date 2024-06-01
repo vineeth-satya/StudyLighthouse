@@ -1,6 +1,7 @@
 import React from "react";
 import "./studycard.css";
 
+
 export default function ProblemsSolved() {
   // Rename the component to ProfileSolved
   return (
