@@ -20,11 +20,13 @@ body{
   top: 200px;
 }
 .intro-text{
-  margin-top: 110px;
+  margin-top: 70px;
+  margin-left: 20px;
 }
 @media only screen and (max-width:780px){
   .intro-text{
     margin-top: 50px;
+    margin-left: 0;
   }
   .intro-circle1{
     visibility: hidden;
