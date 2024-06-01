@@ -107,6 +107,7 @@ body{
             linear-gradient(135deg, #0039a6, rgba(59, 98, 171, 0), rgba(209, 164, 49, 0), rgba(196, 141, 0, 0.5)) border-box;
   border: 3px solid transparent;
   border-radius: 20px;
+  z-index: -1;
 }
 
 .query-submit{
