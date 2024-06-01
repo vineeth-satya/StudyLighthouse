@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body{
-  margin: 20px;
+  margin: 0 20px 20px 20px;
   overflow-x: hidden;
 }
-/* Introduction */
 
+/* Introduction */
 .intro-circle1{
   height: 350px;
   width: 350px;
@@ -21,6 +21,17 @@ body{
 }
 .intro-text{
   margin-top: 110px;
+}
+@media only screen and (max-width:780px){
+  .intro-text{
+    margin-top: 50px;
+  }
+  .intro-circle1{
+    visibility: hidden;
+  }
+  .intro-circle2{
+    left: -100px;
+  }
 }
 .intro-circle2{
   height: 400px;
@@ -36,6 +47,7 @@ body{
 /* Introduction */
 
 
+
 /* About */
 .about{
   margin: -400px 90px 90px 90px;
@@ -49,14 +61,22 @@ body{
   width: 400px;
   background-color: #c48d00;
   border-radius: 50%;
-  filter: blur(210px);
+  filter: blur(190px);
   position: absolute;
   z-index: -1;
   right: -200px;
-  top: 900px;
+  top: 1000px;
 }
-/* Features */
+@media only screen and (max-width:780px){
+  .about{
+    margin: -300px 20px 20px 20px;
+    padding: 20px;
+  }
+}
+/* About */
 
+
+/* Features */
 .feature-circle1{
   filter: blur(5px);
   background-color: #0039a6;
@@ -72,10 +92,15 @@ body{
 }
 
 .robot{
-  position: relative;
+  position: absolute;
   z-index: -1;
-  left: -50px;
-  top: -170px;
+  left: -10px;
+  top: 1500px;
+}
+@media only screen and (max-width:780px){
+  .robot{
+    top: 2000px;
+  }
 }
 
 .feature-cards{
@@ -85,3 +110,8 @@ body{
   border: 3px solid transparent;
   border-radius: 20px;
 }
+
+.query-submit{
+  background-color: #0039a6;
+}
+/* Features */

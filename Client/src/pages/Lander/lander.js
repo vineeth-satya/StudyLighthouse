@@ -1,7 +1,6 @@
 import React from "react";
 
 
-
 // Introduction - First
 const Introduction = function (){
     return (
@@ -17,24 +16,25 @@ const Introduction = function (){
                     </div>
                 </div>
                 <div className="space-x-4">
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Signup</button>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded">Signup</button>
                     <button className="border border-#c48d00 hover:bg-zinc-700 text-#c48d00 font-bold py-2 px-4 rounded login">Login</button>
                 </div>
             </nav>
-            <div className="flex flex-col md:flex-row justify-between pl-6 ">
+            <div className="flex flex-col md:flex-row justify-between pl-6 h-screen">
                 <div className="text-left md:w-1/2 space-y-4 intro-text ">
                     <h1 className="text-4xl md:text-5xl font-bold ml-4">Adaptive Learning Companion</h1><br></br>
                     <p className="text-lg md:text-xl ml-4">Study Partner offers AI help, voice assistance, and community Q&A for personalized, hands-free learning and collaboration.</p>
                 </div>
                 <div className="intro-circle1"></div>
                 <div className="">
-                    <img src="https://i.ibb.co/2k3zhfc/chatbot-voice-controlled-virtual-assistant-abstract-concept-vector-illustration-107173-25716-removeb.png" alt="Illustration" className="w-full h-full"/>
+                    <img src="https://i.ibb.co/2k3zhfc/chatbot-voice-controlled-virtual-assistant-abstract-concept-vector-illustration-107173-25716-removeb.png" alt="Illustration" className=""/>
                 </div>
             </div>
             <div className="intro-circle2"></div>
         </div>
     )
 };
+
 
 // About-Second
 const About = ()=>{
@@ -99,8 +99,7 @@ const Features =  function () {
             </p>
           </div>
         </div><br></br>
-        <div className="flex flex-wrap justify-start gap-8 mb-8">
-        <img src="https://i.ibb.co/KbwrNN7/welcoming-robot.png" alt="welcoming-robot" border="0" className="robot"/>
+        <div className="flex flex-wrap justify-center gap-8 mb-8">
           <div className="relative p-6 bg-zinc-800 rounded-lg shadow-lg w-64 feature-cards md:mr-7">
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-yellow-500 p-2 rounded-full feature-circle2">
             </div>
@@ -120,21 +119,25 @@ const Features =  function () {
             </p>
           </div>
         </div>
-        <div className="flex justify-between items-center border-t border-zinc-700 pt-8 mt-16">
-          <div className="flex items-center">
+        <img src="https://i.ibb.co/KbwrNN7/welcoming-robot.png" alt="welcoming-robot" border="0" className="robot"/>
+        
+        {/* Footer */}
+        <div className="flex flex-col items-center md:flex-row justify-between  border-t border-zinc-700 pt-8 mt-10">
+          <div className="flex">
           <img src="https://i.ibb.co/XX4yXpv/4-removebg-preview-2.png" alt="Logo" className="h-48 w-48 mr-10"/>
           </div>
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col mb-5">
             <h3 className="font-bold mb-2">Contact Us</h3>
             <p>+91 9999999999</p>
             <p>xyz@gmail.com</p><br></br>
-            <div className="flex mt-2">
+            <div className="flex md:mt-2 mt-0 items-">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23'/%3E%3C/svg%3E" alt="Twitter" className="mr-2" />
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95'/%3E%3C/svg%3E" alt="Facebook" className="mr-2" />
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.7em' height='1.7em' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73'/%3E%3C/svg%3E" alt="Youtube" className="mr-2" />
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3'/%3E%3C/svg%3E" alt="Youtube" className="mr-2" />
             </div>
           </div>
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col mb-5">
             <h3 className="font-bold mb-2">Developers</h3>
             <p>S.V.S. Prajnesh</p>
             <p>N. Manikanta Swamy</p>
@@ -142,13 +145,13 @@ const Features =  function () {
             <p>T. Mery Sowmya</p>
             <p>P. Charishma</p>
           </div>
-          <div className="flex items-center">
+          <div className="flex mb-5">
             <input
               type="text"
               placeholder="Enter queries"
-              className="p-2 rounded-l-lg bg-zinc-800 text-white border border-zinc-700"
+              className="p-2 rounded-l-lg bg-zinc-800 text-white border border-zinc-700 query"
             />
-            <button className="p-2 bg-blue-500 text-white rounded-r-lg">Submit</button>
+            <button className="p-2 bg-blue-500 text-white border border-blue-700 rounded-r-lg query-submit">Submit</button>
           </div>
         </div>
       </div>
